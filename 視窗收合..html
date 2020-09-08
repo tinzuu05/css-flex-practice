@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視窗收合練習</title>
+
+    <style>
+        .wrapper {
+            width: 100%;
+            height: 800px;
+            background-color: thistle;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: calc(100% / 3);
+            height: 100%;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:nth-child(2n-1) {
+            background-color: teal;
+        }
+
+        .content {
+            transition-duration: 0s;
+            transition-delay: 0s;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #ipt1:checked~#div1{
+            width: 95%;
+        }
+
+        #ipt1:checked~#div1 .content {
+            opacity: 1;
+            transition-duration: 1s;
+            transition-delay: 0.2s;
+        }
+
+        
+        #ipt2:checked~#div2{
+            width: 95%;
+        }
+
+        #ipt2:checked~#div2 .content {
+            opacity: 1;
+            transition-duration: 1s;
+            transition-delay: 0.5s;
+        }
+
+        
+        #ipt3:checked~#div3{
+            width: 95%;
+        }
+
+        #ipt3:checked~#div3 .content {
+            opacity: 1;
+            transition-duration: 1s;
+            transition-delay: 0.5s;
+        }
+
+        .pic1{
+            width: 400px;
+            height: 400px;
+            background-image: url("https://imageproxy.themaven.net//https%3A%2F%2Fwww.biography.com%2F.image%2FMTY4OTUyODMyNTUxMDM2Mzky%2Fhero-image-the-godfather-gettyimages-159837887.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic2{
+            width: 400px;
+            height: 400px;
+            background-image: url("https://api.time.com/wp-content/uploads/2014/12/godfather-ii.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic3{
+            width: 400px;
+            height: 400px;
+            background-image: url("https://m.media-amazon.com/images/M/MV5BMTQxNjI2MDEwMl5BMl5BanBnXkFtZTgwNzAxNTcxMDE@._V1_SY1000_CR0,0,1475,1000_AL_.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        input {
+            opacity: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="radio" name="fake-btn" id="ipt1">
+        <input type="radio" name="fake-btn" id="ipt2">
+        <input type="radio" name="fake-btn" id="ipt3">
+
+        <label for="ipt1" id="div1" class="box">
+            <h1>Part I</h1>
+            <div class="content">
+                <div class="pic1"></div>
+            </div>
+        </label>
+        <label for="ipt2" id="div2" class="box">
+            <h1>Part II</h1>
+            <div class="content">
+                <div class="pic2"></div>
+            </div>
+        </label>
+        <label for="ipt3" id="div3" class="box">
+            <h1>Part III</h1>
+            <div class="content">
+                <div class="pic3"></div>
+            </div>
+        </label>
+    </div>
+</body>
+</html>
